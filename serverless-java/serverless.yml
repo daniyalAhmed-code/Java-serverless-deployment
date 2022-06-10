@@ -6,14 +6,15 @@ provider:
   runtime: java8
   lambdaHashingVersion: 20201221
 
+package:
+  artifact: target/hello-dev.jar
 
 functions:
   hello:
-    handler: net.waqar.handlers.HelloWorldHandler::handleRequest
+    handler: com.serverless.HelloWorldHandler
     layers:
       - {Ref: CommonLibsLambdaLayer}
 
 layers:
   commonLibs:
     path: layer
-
