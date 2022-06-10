@@ -1,0 +1,19 @@
+service: serverless-java
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: java8
+  lambdaHashingVersion: 20201221
+
+
+functions:
+  hello:
+    handler: net.waqar.handlers.HelloWorldHandler::handleRequest
+    layers:
+      - {Ref: CommonLibsLambdaLayer}
+
+layers:
+  commonLibs:
+    path: layer
+
