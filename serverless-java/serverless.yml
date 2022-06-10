@@ -7,11 +7,11 @@ provider:
   lambdaHashingVersion: 20201221
 
 package:
-  artifact: target/hello-dev.jar
+  artifact: target/layer-demo-1.0.0.jar
 
 functions:
   hello:
-    handler: com.serverless.HelloWorldHandler
+    handler: com.amazonaws.lambda.LambdaFunctionHandler::handleRequest
     layers:
       - {Ref: CommonLibsLambdaLayer}
 

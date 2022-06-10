@@ -11,11 +11,7 @@ public class LambdaFunctionHandler implements RequestHandler<String, String> {
 
     @Override
     public String handleRequest(String event, Context context) {
-        context.getLogger().log("GET event: " + event);
         context.getLogger().log("Received event: " + event);
         return event;
-
     }
 }
-
-  
