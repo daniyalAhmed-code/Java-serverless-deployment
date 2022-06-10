@@ -1,5 +1,4 @@
 #!/bin/bash
-cd ..
 cd code
 
 mvn clean install

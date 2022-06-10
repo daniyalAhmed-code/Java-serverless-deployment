@@ -1,6 +1,5 @@
 #!/bin/bash
 npm install
-cd ..
 mkdir nodejs
 
 mv node_modules nodejs
