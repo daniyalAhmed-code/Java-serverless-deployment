@@ -1,10 +1,9 @@
 service: serverless-java
-frameworkVersion: '2'
+frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: java8
-  lambdaHashingVersion: 20201221
+  runtime: java11
 
 package:
   artifact: target/layer-demo-1.0.0.jar
@@ -17,4 +16,5 @@ functions:
 
 layers:
   commonLibs:
-    path: layer
+    package:
+      artifact: target/java-lamda-layer.zip

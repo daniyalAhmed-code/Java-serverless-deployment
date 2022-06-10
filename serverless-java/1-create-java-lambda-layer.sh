@@ -1,7 +1,8 @@
 #!/bin/bash
 mvn clean install
-cd Lambda-Layers
-cp -r target/java  java
-zip -r java.zip java 
-mkdir layer
-mv java.zip  layer
+cd target
+
+zip -r java-lamda-layer.zip java
+
+cd ..
+sls deploy
