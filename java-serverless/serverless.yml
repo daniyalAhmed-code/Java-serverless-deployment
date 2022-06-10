@@ -1,0 +1,20 @@
+service: demo-serverless-java
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: java11
+
+package:
+  artifact: code/target/layer-demo-1.0.0.jar
+
+functions:
+  hello:
+    handler: com.amazonaws.lambda.LambdaFunctionHandler::handleRequest
+    layers:
+      - {Ref: CommonLibsLambdaLayer}
+
+layers:
+  commonLibs:
+    package:
+      artifact: code/target/java-lamda-layer.zip
