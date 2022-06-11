@@ -1,0 +1,12 @@
+service: demo-galaxy-nodejs-resource-lambda-layer
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+ 
+layers:
+  nodejsCommonLayer:
+    package:
+      artifact: nodejs.zip
+

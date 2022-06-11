@@ -1,0 +1,11 @@
+service: demo-galaxy-java-resource-lambda-layer
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: java11
+ 
+layers:
+  commonLibs:
+    package:
+      artifact: java-lamda-layer.zip

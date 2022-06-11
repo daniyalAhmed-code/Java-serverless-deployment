@@ -1,0 +1,6 @@
+{
+  "name": "course-manager",
+  "devDependencies": {
+    "serverless-latest-layer-version": "2.1.0"
+  }
+}

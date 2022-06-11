@@ -1,0 +1,16 @@
+service: demo-galaxy-serverless-java
+frameworkVersion: '2'
+plugins:
+  - serverless-latest-layer-version
+provider:
+  name: aws
+  runtime: java11
+
+package:
+  artifact: mirror-request-service/target/layer-demo-1.0.0.jar
+
+functions:
+  hello:
+    handler: com.amazonaws.lambda.LambdaFunctionHandler::handleRequest
+    layers:
+      - arn:aws:lambda:us-west-1:489994096722:layer:commonLibs:latest

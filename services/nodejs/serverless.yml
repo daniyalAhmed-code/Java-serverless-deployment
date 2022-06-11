@@ -1,0 +1,13 @@
+service: demo-galaxy-serverless-nodejs
+frameworkVersion: '2'
+plugins:
+  - serverless-latest-layer-version
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  hello:
+    handler: mirror-request-service/handlers/handler.hello
+    layers:
+      - arn:aws:lambda:us-west-1:489994096722:layer:nodejsCommonLayer:latest
